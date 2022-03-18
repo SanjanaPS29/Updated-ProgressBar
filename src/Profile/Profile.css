@@ -1,0 +1,10 @@
+.profileStyle{
+    width:30px;
+    height:30px; 
+    background-color: green;
+    border-radius: 5px;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 5px;
+  }
+

@@ -1,0 +1,23 @@
+.boxIcon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #9972d3;
+    border-radius: 10px;
+}
+
+.mainContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height:  200px;
+    text-align: center;
+}
+
+
+

@@ -1,0 +1,287 @@
+   <div style={{ height: "300px", width: "300px", transform: "rotate(-180deg)" }}>
+      <div className="stepper-bar12" >
+        <div className="stepperCircle" >
+          <div className="dotted-circle" ></div>
+        </div>
+        <hr />
+        <div className="stepperCircle" >
+          <div className="triangle">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+height: fit-content;
+    padding: 1px;
+    background-color: antiquewhite;
+
+
+
+
+
+
+
+
+
+
+
+If the cube is directly inside the container:
+
+#container:hover > #cube { background-color: yellow; }
+If cube is next to (after containers closing tag) the container:
+
+#container:hover + #cube { background-color: yellow; }
+If the cube is somewhere inside the container:
+
+#container:hover #cube { background-color: yellow; }
+If the cube is a sibling of the container:
+
+#container:hover ~ #cube { background-color: yellow; }
+
+
+
+
+
+
+
+<div className="skillHover">
+<div>progressbar</div>
+<div className="skillStyle">
+  <div className="percentageStyle"> 73%</div>
+  <div className="skillName">Skills Match</div>
+</div>
+</div>
+
+
+
+
+
+.container2{
+  display: flex;
+  background-color: red;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  color:#fff;
+  height: 60px;
+  width: -webkit-fill-available;
+}
+.profileStyle{
+  width:75px;
+  height:75px;
+  border-radius: 50%;  
+  position: relative;
+  border: 6px solid #281b8b;
+
+}
+
+.vertical-Line{
+ width:1px;
+height: 50px;
+background-color: blue;
+}
+
+.profileOuterStyle{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width:110px;
+  height:110px;
+  top:-50px;
+  border-radius: 50%;  
+  position:relative;
+  background-color: #fff;
+}
+.Container{
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  background-color: #fff;
+  height: 500px;
+  padding: 1em;
+ align-items: center;
+}
+
+.container1{
+  display: flex;
+  flex-direction: column;
+  background: cornsilk;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding:0.5em;
+  align-items: center;
+  width: -webkit-fill-available;
+  margin-bottom: 1em;
+}
+
+.skillStyle {
+  display: block;
+  display: flex;
+  height: 50px;
+ 
+  background-color: #ded9d3;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+ .container1:hover{
+   margin-bottom:0px;
+ }
+
+/*.container1:hover .skillStyle {
+  display: block;
+  display: flex;
+  height: 40px;
+ 
+  background-color: #ded9d3;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}*/
+.Main-Container{
+  display: flex;
+  max-width: 500px;
+  height: 600px;
+  border: 1px solid black;
+  align-items: center;
+  background-color: antiquewhite;
+  justify-content: center;
+ padding-top:5em;
+}
+
+
+.percentageStyle{
+
+}
+
+
+svg{
+       position: relative;
+       width: 50px;
+       height: 50px;
+}
+
+svg circle{
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #86cde9;
+  stroke-width: 5;
+  stroke-linecap: 5;
+  transform: translate(5px,5px);
+
+}
+
+.percentageStyle{
+  position: relative;
+  width: 50px;
+  height: 50px;
+    z-index: 1000;
+}
+
+
+svg circle{
+stroke-dasharray:440 ;
+stroke-dashoffset: calc(440 -(440 * 90)/ 100 );
+stroke:  blue
+}
+
+.percentageStyle .percentageNumber{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.percentageStyle .percentageNumber h6{
+  color: #777;
+  font-weight: 500;
+  font-size: 14px;
+
+
+}
+
+
+/*stroke-dashoffset: calc(440 -(440 * 90)/ 100 );
+stroke:  blue;
+90%*/
+
+
+
+
+/* 
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Other/javascript.js to edit this template
+ */
+  
+const CircularProgress = ({details,color}) => {
+     const [offset, setOffset] = useState(0);
+     
+ const state = {
+    size: 20,
+    progress: details.skill_percentage,
+    strokeWidth: 3,
+    circleOneStroke: "#d9edfe",
+    circleTwoStroke: color,
+  };
+    
+  const { size, progress, strokeWidth, circleOneStroke, circleTwoStroke } =
+    state;
+  const center = size / 2;
+  const radius = size / 2 - strokeWidth / 2;
+  const circumference = 2 * Math.PI * radius;
+    
+    useEffect(() => {
+    const progressOffset = ((100 - progress) / 100) * circumference;
+    setOffset(progressOffset);
+  }, []);
+    
+
+    background-color: aliceblue;
+
+    
+    return(
+            <div className="skillStyle">
+            <div style={{display: "flex", justifyContent: "center"}}>
+              <svg className="progressBar" width={size} height={size}>
+                <circle
+                  className="circle-bg"
+                  stroke={circleOneStroke}
+                  cx={center}
+                  cy={center}
+                  r={radius}
+                  strokeWidth={strokeWidth}
+                ></circle>
+                <circle
+                  className="circle"
+                  stroke={circleTwoStroke}
+                  cx={center}
+                  cy={center}
+                  r={radius}
+                  strokeWidth={strokeWidth}
+                  strokeDasharray={circumference}
+                  strokeDashoffset={offset}
+                ></circle>
+              </svg>
+               <div>
+              <div className="percentageNumber">
+                <div style={{color:color ,fontSize:"9px"}} className="percentage">
+                  {details.skill_percentage}
+                  <span>%</span>
+                </div>
+                <div style={{ fontSize:"8px"}}>Skills Match</div>
+              </div>
+            </div>
+            </div>
+           
+          </div>)
+}

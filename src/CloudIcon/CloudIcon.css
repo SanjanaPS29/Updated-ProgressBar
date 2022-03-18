@@ -1,0 +1,84 @@
+
+.skillHover{
+    display: none;
+  
+}
+
+
+/*.Container:hover > .skillHover{*/
+
+.Container:hover > .skillHover{
+    display: block;
+    display: flex;
+    margin-left: 2px;
+    align-items: center;
+    background-color: cornsilk;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    max-height: 30px;
+    min-width: 80px;
+      z-index: 1;
+      padding: 5px;
+      border: 1px solid #aedcae;
+    
+}
+.skillStyle{
+    display: flex;
+    flex-direction: column;
+    padding-left: 6px;
+}
+
+.percentageStyle{
+    color:green;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.skillMatch{
+font-size: 8px;
+font-weight: 500;
+}
+
+
+.Main-Container{
+     width: 60px;
+    /* height: 100px;
+    padding: 0.5em;  */
+    display: flex;
+    justify-content: center;
+    border: 1px solid pink;   
+}
+
+.iconText{
+  max-width: 500px;
+  text-align: center;
+}
+  
+.Container{
+display: flex;
+
+}
+
+  .Content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* min-width: 65px; */
+  }
+
+  .profileStyle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;  
+    position: absolute;
+  }
+
+  .profileOuterStyle{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50%;  
+    background-color: #fff;
+    position:relative;
+   
+  }

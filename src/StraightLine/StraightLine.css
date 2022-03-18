@@ -1,0 +1,27 @@
+/* .arrow {
+    width: 120px;
+  } */
+  .Straight{
+    height: 55px;
+ display: flex;
+ align-items: center;
+
+  }
+
+  .line {
+    margin-top: 14px;
+    width: 90px;
+    background: blue;
+    height: 2px;
+    float: left;
+  
+  }
+  
+  .point {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 30px solid blue;
+    float: right;
+  }

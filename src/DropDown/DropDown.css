@@ -1,0 +1,31 @@
+/* select>option{ 
+    height:20px;
+  }
+
+  select{
+    height:40px;
+  }
+
+  select option{
+    font-size: 10px;
+  }
+  .options li {
+    padding:0 16px;
+    margin:12px 0;
+    padding:0 10px;
+} */
+
+select{
+height: 50px;
+width:150px;
+}
+
+.a option {
+    height: 50px;
+    font-size: 20px;
+
+}
+.dropDown option {
+    height:50px;
+    font-size: 20px;
+}

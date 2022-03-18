@@ -1,0 +1,14 @@
+.content{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    width:-webkit-fill-available;
+}
+
+.dottedLine{
+    
+    height: 1px;
+    border-bottom: 0.5px dashed #262F63;
+    opacity: 1;  
+    
+}

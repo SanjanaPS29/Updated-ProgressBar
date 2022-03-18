@@ -1,0 +1,14 @@
+.circle-bg{
+    fill:none;
+  }
+  
+  .circle{
+    fill:none;
+  }
+  
+  .progress-bar{
+    max-width: 100%;
+    max-height: 100px;
+    transform: rotate(-90deg);
+  }
+  
